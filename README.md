@@ -32,7 +32,6 @@
 ![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/b77ef3a4-b995-4cb9-a992-7b218cd1c187)
 ![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/b26eb023-b4ec-44ee-a31f-14822b5ae6a3)
 ![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/275adf22-ce52-44ff-9d04-c1548a5c1a52)
-![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/92af7092-7000-419d-b525-a04c79227229)
 ![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/ae994228-cb1b-4e54-9fef-5d45d2c9f8ce)
 ![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/4d84fdd0-d9c9-4660-9ab0-2b99ad0e640b)
 ![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/19c9c80f-f80b-41bf-91d0-20f1da5905bc)
