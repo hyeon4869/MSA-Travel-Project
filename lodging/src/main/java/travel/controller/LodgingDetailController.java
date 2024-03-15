@@ -33,17 +33,17 @@ public class LodgingDetailController {
             @RequestParam(required = false, defaultValue = "32") String contenttypeid,
             @RequestParam(required = false, defaultValue = "json") String type) {
 
-                //callable 인터페이스: 값을 반환하는 작업, 쓰레드에 의해 실행
-                return Mono.fromCallable(() -> lodgingDetailRepository.findByContentid(Long.valueOf(contentid)))
-                .flatMap(optionalLodgingDetail -> {
-                    if (optionalLodgingDetail.isPresent()) {
-                        log.info("db에 일치하는 데이터 존재");
-                        return Mono.just(optionalLodgingDetail.get());
-                    } else {
-                        log.info("db에 일치하는 데이터가 없음");
+                // //callable 인터페이스: 값을 반환하는 작업, 쓰레드에 의해 실행
+                // return Mono.fromCallable(() -> lodgingDetailRepository.findByContentid(Long.valueOf(contentid)))
+                // .flatMap(optionalLodgingDetail -> {
+                //     if (optionalLodgingDetail.isPresent()) {
+                //         log.info("db에 일치하는 데이터 존재");
+                //         return Mono.just(optionalLodgingDetail.get());
+                //     } else {
+                //         log.info("db에 일치하는 데이터가 없음");
                         return lodgingDetailService.searchDetail(contentid, contenttypeid, type);
-                    }
-                });
+                //     }
+                // });
     }
     
 }

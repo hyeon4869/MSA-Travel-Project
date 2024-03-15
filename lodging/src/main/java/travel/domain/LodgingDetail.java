@@ -36,7 +36,7 @@ public class LodgingDetail {
 
     private String telname;
 
-    private String homePage;
+    private String homepage;
 
     private String firstimage;
 

@@ -1,5 +1,7 @@
 package travel.controller;
 
+import java.time.LocalDate;
+
 import javax.transaction.Transactional;
 
 import org.slf4j.Logger;
@@ -39,12 +41,25 @@ public class RoomController {
             @RequestParam(required = false, defaultValue = "32") String contenttypeid,
             @RequestParam(required = false, defaultValue = "json") String type) {
 
-        return Mono.fromCallable(() -> roomRepository.findByContentid(Long.valueOf(contentid)))
+                return Mono.fromCallable(() -> roomRepository.findByContentid(Long.valueOf(contentid)))
                 .flatMapMany(rooms -> {
                     if (!rooms.isEmpty()) {
                         logger.info("db에 일치하는 데이터 존재");
+    
+                        LocalDate today = LocalDate.now();
+    
+                        // 각 Room 객체에 대해 updateRoomCapacityDates 메소드를 호출합니다.
+                        rooms.forEach(room -> {
+                            boolean hasPastDate = room.getRoomCapacity().keySet().stream()
+                                    .anyMatch(date -> date.isBefore(today));
+    
+                            if (hasPastDate) {
+                                roomService.updateRoomCapacityDates(room); // 여기서 room은 각각의 Room 객체를 나타냅니다.
+                            }
+                        });
+    
                         return Flux.fromIterable(rooms);
-                    } else {
+                        } else {
                         logger.info("db에 일치하는 데이터가 없음");
                         return roomService.searchRoom(contentid, contenttypeid, type);
                     }

@@ -169,6 +169,7 @@ public class RoomService {
                     lodgingReservationCancelRequested.getRoomCode())
                     .orElseThrow(() -> new IllegalArgumentException("예약 취소 요청된 객실의 정보를 확인할 수 없습니다."));
 
+
             Map<LocalDate, Long> roomCapacity = room.getRoomCapacity();
             roomCapacity.compute(reservationDate, (key, value) -> {
                 if (value >= 1) {
@@ -182,6 +183,19 @@ public class RoomService {
         } catch (Exception e) {
             logger.error("알 수 없는 오류로 해당 객실의 수를 증가하는데 실패했습니다.");
             throw new RollbackException("알 수 없는 오류가 발생했습니다.");
+        }
+    }
+
+    public void updateRoomCapacityDates(Room room) {
+        LocalDate today = LocalDate.now();
+        LocalDate endDate = today.plusDays(29); 
+
+        Map<LocalDate, Long> roomCapacity = room.getRoomCapacity();
+
+        roomCapacity.keySet().removeIf(date -> date.isBefore(today));
+
+        for (LocalDate date = today; !date.isAfter(endDate); date = date.plusDays(1)) {
+            roomCapacity.putIfAbsent(date, 1L);
         }
     }
 
@@ -212,11 +226,11 @@ public class RoomService {
             Map<LocalDate, Long> roomCapacity = new ConcurrentHashMap<>();
 
             LocalDate startDate = LocalDate.now();
-            LocalDate endDate = startDate.plusDays(29); 
+            LocalDate endDate = startDate.plusDays(29);
 
             LongStream.rangeClosed(0, ChronoUnit.DAYS.between(startDate, endDate)).parallel().forEach(day -> {
                 LocalDate date = startDate.plusDays(day);
-                roomCapacity.put(date, 1L); 
+                roomCapacity.put(date, 1L);
             });
 
             room.setRoomCapacity(roomCapacity);
@@ -228,4 +242,5 @@ public class RoomService {
             throw new RuntimeException("Json 변환 중 오류가 발생했습니다 : " + e.getMessage());
         }
     }
+
 }

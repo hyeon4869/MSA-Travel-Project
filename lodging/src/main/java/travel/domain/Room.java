@@ -1,8 +1,8 @@
 package travel.domain;
 
 import java.time.LocalDate;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
@@ -46,7 +46,7 @@ public class Room {
 
     private Long roomoffseasonminfee2;
 
-    private Long roompeakSeasonMinfee1;
+    private Long roompeakSeasonminfee1;
 
     private Long roompeakseasonminfee2;
 
@@ -105,7 +105,8 @@ public class Room {
     private String smallimageurl;
 
     @ElementCollection
-    private Map<LocalDate,Long> roomCapacity = new HashMap<>();
+    private Map<LocalDate, Long> roomCapacity = new ConcurrentHashMap<>();
+
 
     @PostPersist
     public void onPostPersist() {
