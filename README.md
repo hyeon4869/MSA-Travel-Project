@@ -17,3 +17,27 @@
 
 시스템 흐름도:
 ![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/39a18f2e-7f70-4583-8889-27d039d5ae58)
+
+요구사항 명세서:
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/218715fa-389d-43c9-bb35-f53feab7b66f)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/0fbf7fe9-4db2-4e98-8b89-1ec46ed88c04)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/5176e764-6287-4744-a93e-ac0ca886b0a3)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/0cea976a-3789-432e-bffd-bed6989d9f4e)
+
+
+주요 서비스:
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/9944925d-31c4-4668-b61e-3108c2bf6913)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/ff00b8c7-0cf9-474f-85d4-b520885f9dd0)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/561b70b3-ed92-45ec-8424-39141a0826fd)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/b77ef3a4-b995-4cb9-a992-7b218cd1c187)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/b26eb023-b4ec-44ee-a31f-14822b5ae6a3)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/275adf22-ce52-44ff-9d04-c1548a5c1a52)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/92af7092-7000-419d-b525-a04c79227229)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/ae994228-cb1b-4e54-9fef-5d45d2c9f8ce)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/4d84fdd0-d9c9-4660-9ab0-2b99ad0e640b)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/19c9c80f-f80b-41bf-91d0-20f1da5905bc)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/54ad72d7-75d4-4cd5-a7d9-a41faef74938)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/d914f820-c504-42e1-9f75-0ccb57657e24)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/d2230ed6-edec-4a58-89c2-8ddb7f173bf9)
+![image](https://github.com/hyeon4869/MSA-Travel-Project/assets/119660070/a7f2188d-921e-48a1-9e41-deaad5f9767a)
+
